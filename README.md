@@ -1,6 +1,6 @@
 Of course. Here is the complete Markdown content for your `README.md` file, ready to be copied and pasted.
 
-````markdown
+
 # 📄 AI Resume Analyzer
 
 An intelligent tool that analyzes your resume against a job description, providing a detailed match report, AI-powered suggestions, and links to learning resources for missing skills. This project leverages the Google Gemini API to deliver a smart, agentic analysis.
@@ -106,3 +106,4 @@ This application is deployed as a Web Service on [Render](https://render.com/). 
 
 ```
 ```
+
