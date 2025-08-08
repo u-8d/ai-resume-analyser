@@ -129,7 +129,7 @@ def analyze_documents(resume_pdf, jd_pdf, progress=gr.Progress()):
     return chart_path, result
 
 # --- GRADIO UI ---
-with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue", secondary_hue="light-blue"), css=".gradio-container {max-width: 1200px !important}") as iface:
+with gr.Blocks(theme=gr.themes.Soft(primary_hue="blue", secondary_hue="blue"), css=".gradio-container {max-width: 1200px !important}") as iface:
     gr.Markdown("# 📄 Resume Analyzer AI with Google Gemini")
     gr.Markdown("...") # Your markdown description here
 
