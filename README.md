@@ -29,26 +29,22 @@ An intelligent tool that analyzes your resume against a job description, providi
 The application operates as an intelligent agent. The Python environment acts as the "body" to handle files and tools, while the Gemini model acts as the "brain" to perform analysis and generate insights.
 
 ```mermaid
-flowchart TD
-    subgraph subGraph0["User & Python Environment"]
-        B{"Python Environment"}
-        A["User Input<br>- Resume.pdf<br>- JD.pdf"]
-        C["Tool: PyMuPDF<br>→ Raw Text"]
+%%{init: {'theme': 'base', 'themeVariables': { 'background': '#FFFFFF'}}}%%
+graph TD
+    subgraph "User & Python Environment"
+        A[User Input<br/>- Resume.pdf<br/>- JD.pdf] --> B{Python Environment}
+        B -->|1. Extracts Text| C[Tool: PyMuPDF<br/>→ Raw Text]
     end
-    subgraph subGraph1["The Agentic Core"]
-        D["🧠 Gemini Agent"]
-        E["Structured JSON<br>- Skill Data<br>- AI Suggestions"]
+
+    subgraph "The Agentic Core"
+        C -->|2. Sends Goal & Data| D[🧠 Gemini Agent]
+        D -->|Plan:<br/>Analyze, Categorize, Compare, Suggest| E[Structured JSON<br/>- Skill Data<br/>- AI Suggestions]
     end
-    subgraph subGraph2["Final Assembly & Output"]
-        F["Tools:<br>Matplotlib, Urllib<br>→ Chart & Links"]
-        G["Final Output:<br>Chart, Report, Links"]
+
+    subgraph "Final Assembly & Output"
+        E -->|3. Executes Tasks| F[Tools:<br/>Matplotlib, Urllib<br/>→ Chart & Links]
+        F -->|4. Assembles Report| G[Final Output:<br/>Chart, Report, Links]
     end
-    A --> B
-    B -- "1. Extracts Text" --> C
-    C -- "2. Sends Goal & Data" --> D
-    D -- "Plan:<br>Analyze, Categorize, Compare, Suggest" --> E
-    E -- "3. Executes Tasks" --> F
-    F -- "4. Assembles Report" --> G
 
     style A fill:#E3F2FD,stroke:#90CAF9
     style B fill:#FFFDE7,stroke:#FFD54F
@@ -106,4 +102,5 @@ This application is deployed as a Web Service on [Render](https://render.com/). 
 
 ```
 ```
+
 
