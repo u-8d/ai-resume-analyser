@@ -33,17 +33,17 @@ The application operates as an intelligent agent. The Python environment acts as
 graph TD
     subgraph "User & Python Environment"
         A[User Input<br/>- Resume.pdf<br/>- JD.pdf] --> B{Python Environment}
-        B -->|1. Extracts Text| C[Tool: PyMuPDF<br/>→ Raw Text]
+        B -->|1.Extracts Text| C[Tool: PyMuPDF<br/>→ Raw Text]
     end
 
     subgraph "The Agentic Core"
-        C -->|2. Sends Goal & Data| D[🧠 Gemini Agent]
+        C -->|2.Sends Goal & Data| D[🧠 Gemini Agent]
         D -->|Plan:<br/>Analyze, Categorize, Compare, Suggest| E[Structured JSON<br/>- Skill Data<br/>- AI Suggestions]
     end
 
     subgraph "Final Assembly & Output"
-        E -->|3. Executes Tasks| F[Tools:<br/>Matplotlib, Urllib<br/>→ Chart & Links]
-        F -->|4. Assembles Report| G[Final Output:<br/>Chart, Report, Links]
+        E -->|3.Executes Tasks| F[Tools:<br/>Matplotlib, Urllib<br/>→ Chart & Links]
+        F -->|4.Assembles Report| G[Final Output:<br/>Chart, Report, Links]
     end
 
     style A fill:#E3F2FD,stroke:#90CAF9
@@ -62,8 +62,8 @@ graph TD
 1.  **Clone the repository:**
 
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
+    git clone [<your-repo-url>](https://github.com/u-8d/ai-resume-analyser)
+    cd ai-resume-analyser
     ```
 
 2.  **Install dependencies:**
@@ -102,5 +102,6 @@ This application is deployed as a Web Service on [Render](https://render.com/). 
 
 ```
 ```
+
 
 
